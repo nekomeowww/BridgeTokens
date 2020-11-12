@@ -92,8 +92,8 @@
 
   "Sidechain.Disclaimer": "This is a temporary address and can only be used once!",
   "Sidechain.Description.Title": "DESCRIPTION",
-  "Sidechain.Description.Deposit.Message": "ELA to Sidechain from Mainchain",
-  "Sidechain.Description.Withdaw.Message": "ELA to Mainchain from Sidechain",
+  "Sidechain.Description.Deposit.Message": "ELA to Smart Contract Chain",
+  "Sidechain.Description.Withdaw.Message": "ELA from Smart Contract Chain",
   "Sidechain.Start.Title": "START",
   "Sidechain.Start.Message": "Send ELA to the address below",
   "Sidechain.Status.Title": "STATUS",
