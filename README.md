@@ -2,14 +2,14 @@
 
 ShadowTokens is a cross-chain bridge between Elastos and Ethereum, enabling users to transfer digital asset ownership information (ETH, ELA, and any ERC20, ERC677, or ERC827 tokens) from one chain to the other quickly and reliably. The objective of this bridge is two fold:
 
-1. Provide another scaling option for Ethereum via Elastos's EVM-comptabile sidechain (negligible fees, secured by over 50% of Bitcoin's hashpower plus DPoS).
+1. Provide another scaling option for Ethereum via Elastos's EVM-comptabile Smart Contract sidechain (negligible fees, secured by over 50% of Bitcoin's hashpower plus DPoS).
 2. Enable Elastos to take full advantage of the tokens native to Ethereum, such as stablecoins, for use in DeFi applications (TokSwap, Quicksilver, etc.).
 
 ShadowTokens plans to develop more bridges in the future to provide interoperability for isolated blockchains. The smart contracts for this application use the multi-token extension for the Arbitrary Message Bridge, which has been audited and used for a variety of existing bridges (xDai, POA). For more information about this implementation, please visit https://docs.tokenbridge.net/. 
 
 ## Visual Guide
 
-This ShadowTokens interface is intended to be a user-friendly tool to map your assets between chains. A demonstration of moving ELA from Elastos to Ethereum and back is provided below. Please note that 'ELA' refers to ELA on the Elastos smart contract sidechain, not the mainchain. If you need to fund the smart contract sidechain with ELA first, a tool for that is also available on Shadowtokens (see the end of this guide).
+This ShadowTokens interface is intended to be a user-friendly tool to map your assets between chains. A demonstration of moving ELA from Elastos to Ethereum and back is provided below. Please note that 'ELA' refers to ELA on the Elastos Smart Contract sidechain, not the Mainchain. If you need to fund the Smart Contract sidechain with ELA first, a tool for that is also available on Shadowtokens (see the end of this guide).
 
 ### Transfer ELA from Elastos to Ethereum
 
@@ -21,7 +21,7 @@ Once connected, you will see your address populated in the header and your ELA b
 
 ![shadowtokens_github](/src/assets/docs/2.png)
 
-There are also icons labeled 'Lock', 'Release', 'Burn', and 'Mint'. These will change depending on which asset you select. In this case, ELA will be locked on the Elastos chain and its shadow token (ELA on Ethereum) will be minted on the Ethereum chain at a 1:1 ratio, as governed by the mediator smart contracts. When tranferred back, the 'ELA on Ethereum' token will be burned and native ELA will be released to your address on the Elastos sidechain. This same principle applies to all asset transfers.
+There are also icons labeled 'Lock', 'Release', 'Burn', and 'Mint'. These will change depending on which asset you select. In this case, ELA will be locked on the Elastos chain and its shadow token (ELA on Ethereum) will be minted on the Ethereum chain at a 1:1 ratio, as governed by the mediator smart contracts. When transferred back, the 'ELA on Ethereum' token will be burned and native ELA will be released to your address on the Elastos sidechain. This same principle applies to all asset transfers.
 
 ![shadowtokens_github](/src/assets/docs/3.png)
 
@@ -33,7 +33,7 @@ There are also icons labeled 'Lock', 'Release', 'Burn', and 'Mint'. These will c
 ![shadowtokens_github](/src/assets/docs/4.png)
 
 
-**3**. Next, you will directed to a confirmation page. Ensure the detailsa are correct and click 'Confirm'. 
+**3**. Next, you will directed to a confirmation page. Ensure the details are correct and click 'Confirm'. 
 
 *Note: Bridge mediator fees are presently only charged for ELA and ETH transfers on the return trip and are set at 0.1%.*
 
@@ -42,12 +42,12 @@ There are also icons labeled 'Lock', 'Release', 'Burn', and 'Mint'. These will c
 
 **4**. You should now be prompted to authorize the contract interaction in your wallet. The default gas price is fine and does not need to be changed, though you can increase it if you want a faster transaction. Confirm the transaction in your wallet. 
 
-*Note: When transferring ELA and ETH, you do not need to first approve an allowance. However, for ERC-20 tokens there will first be a spend authorization request to permit the smart contract to retrieve funds from the token contract, and then a second request for the actual bridge transfer.*
+*Note: When transferring ELA and ETH, you do not need to approve an allowance. However, for ERC-20 tokens there will first be a spend authorization request to permit the smart contract to retrieve funds from the token contract, and then a second request for the actual bridge transfer.*
 
 ![shadowtokens_github](/src/assets/docs/6.png)
 
 
-**5**. The interface will now display the transfer progress, which includes waiting for block confirmations on the source network and for the bridge oracles to validate the transaction and mint or release your assets on the destination network. Once complete, the success message will pop up with a link to view the confirmed transaction on the destination network. 
+**5**. The interface will now display the transfer progress, which includes waiting for block confirmations on the source network and for the bridge oracles to validate the transaction and mint or release your assets on the destination chain. Once complete, the success message will pop up with a link to view the confirmed transaction on the destination chain's block explorer.. 
 
 *Note: In some cases, the transfer may take longer than expected (>5 minutes) due to the fixed gas prices used by the bridge mediator. If this happens, please monitor the block explorer link provided. Your funds are safe and will eventually arrive.*
 
@@ -56,11 +56,11 @@ There are also icons labeled 'Lock', 'Release', 'Burn', and 'Mint'. These will c
 
 ### Send ELA from Ethereum back to Elastos
 
-You should now have some ELA in your wallet on the Ethereum chain. To view this, switch your network in MetaMask to the Ethereum mainnet. The app should update to reflect your new balances on the chosen network.
+You should now have some ELA in your wallet on the Ethereum chain. Switch your network in MetaMask to the Ethereum mainnet. The app should update to reflect your new balances on the chosen network.
 
 ![shadowtokens_github](/src/assets/docs/8.png)
 
-To view the ELA that you minted on Ethereum, click the 'ETH' dropdown menu to open the default token list and select ELA.
+To see the ELA that you minted on Ethereum, click the 'ETH' dropdown menu to open the default token list and select ELA.
 
 *Note: You can also view the opposite bridge direction by clicking the swap icon in the middle, but you will need to switch your network before beginning a transfer. It will not auto-connect your wallet to the proper network.*
 
@@ -68,11 +68,13 @@ To view the ELA that you minted on Ethereum, click the 'ETH' dropdown menu to op
 
 *Note: This is also where you can add custom tokens by pasting the token contract address in the search field.*
 
-To return your ELA on Ethereum back to Elastos, simply repeat the same process as above. You will now be burning the ELA token on Ethereum, and releasing your original ELA to your account. Keep in mind that gas fees will be much higher when initiating a transfer from the Ethereum network (and more confirmations are required), so plan accordingly.
+To return your ELA on Ethereum back to the Elastos Smart Contract chain, simply repeat the same process as above. You will now be burning the ELA token on Ethereum, and releasing your original ELA back to your account. Keep in mind that gas fees will be much higher when initiating a transfer from the Ethereum chain (and more confirmations are required), so plan accordingly.
 
 ![shadowtokens_github](/src/assets/docs/10.png)
 
 That's it. You can now repeat this process to bridge any token between the Elastos and Ethereum ecosystems. Enjoy!
+
+
 
 
 
@@ -82,7 +84,7 @@ The deposit and withraw tool may be found by toggling the switch in the toolbar 
 
 ### Deposit
 
-To deposit ELA to the sidechain, send native ELA to the address generated by scanning the QR code or pasting in the address provided to your wallet of choice.
+To deposit ELA to the Smart Contract sidechain, send native ELA to the address provided by scanning the QR code or entering the address in your wallet of choice.
 
 ![shadowtokens_github](/src/assets/docs/sidechain_1.png)
 
@@ -95,12 +97,12 @@ It will take a few minutes for the deposit to be received and tracked by the int
 
 ### Withdraw
 
-To withdraw ELA from the sidechain select the 'Withdraw' tab, enter the amount you want to withdraw from your MetaMask wallet and the mainchain address where you want to receive your ELA. Click withdraw and you will be prompted to approve the transaction in MetaMask.
+To withdraw ELA from the Smart Contract sidechain select the 'Withdraw' tab, enter the amount you want to withdraw from your MetaMask wallet, and the enter mainchain address where you want to receive your ELA. Click withdraw and you will be prompted to confirm the transaction.
 
 ![shadowtokens_github](/src/assets/docs/sidechain_3.png)
 
 *Note: CryptoName is supported in the address field, so if you own one you can type it in the field to retrieve your address.*
 
-That's it. Watch the prompts to monitor your withdrawal progress. 
+That's it. Monitor the status field to view your withdrawal progress. 
 
 ![shadowtokens_github](/src/assets/docs/sidechain_4.png)
