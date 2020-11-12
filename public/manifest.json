@@ -1,0 +1,9 @@
+{
+  "short_name": "ShadowTokens",
+  "name": "ShadowTokens",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#000"
+}

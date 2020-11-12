@@ -1,0 +1,63 @@
+@import url("https://db.onlinewebfonts.com/c/88f10bf18a36407ef36bf30bc25a3618?family=Suisse+Intl");
+/* @font-face {
+  font-family: "Suisse Intl";
+  src: url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot");
+  src: url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/88f10bf18a36407ef36bf30bc25a3618.svg#Suisse Intl")
+      format("svg");
+} */
+
+body {
+  margin: 0;
+  font-family: "Suisse Intl", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #585861;
+  min-height: 100vh;
+  background-image: linear-gradient(115deg, #263040 0%, #2c2123 80%);
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a,
+a:visited,
+a:hover,
+
+div {
+  outline: none;
+}
+
+/* charts */
+tspan,
+.recharts-legend-item-text {
+  font-size: 12px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #d0d2d9;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d0d2d9;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #d0d2d9;
+}

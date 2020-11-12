@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="299.92441"
+   height="233.82465"
+   viewBox="0 0 299.92441 233.82465"
+   version="1.1"
+   id="svg875"
+   sodipodi:docname="walletconnect.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata879">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>WalletConnect</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     id="namedview877"
+     showgrid="false"
+     fit-margin-top="25"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="25"
+     inkscape:zoom="1.9987552"
+     inkscape:cx="170.45295"
+     inkscape:cy="149.18864"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg875" />
+  <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+  <title
+     id="title866">WalletConnect</title>
+  <desc
+     id="desc868">Created with Sketch.</desc>
+  <defs
+     id="defs870" />
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="translate(-0.03779312,24.659863)">
+    <g
+       id="walletconnect-logo-alt"
+       fill="#3b99fc"
+       fill-rule="nonzero">
+      <path
+         d="m 61.438543,36.256261 c 48.911227,-47.888166 128.211987,-47.888166 177.123207,0 l 5.88655,5.763418 c 2.44556,2.394408 2.44556,6.276511 0,8.67092 l -20.1367,19.715503 c -1.22278,1.197205 -3.2053,1.197205 -4.42808,0 l -8.10058,-7.931148 c -34.1217,-33.407982 -89.44389,-33.407982 -123.565582,0 l -8.675056,8.493605 c -1.222782,1.197204 -3.205301,1.197204 -4.428081,0 L 54.977527,51.253056 c -2.445562,-2.394409 -2.445562,-6.276512 0,-8.67092 z m 218.767797,40.773745 17.9217,17.546897 c 2.44554,2.394397 2.44556,6.276477 3e-5,8.670887 l -80.81017,79.12114 c -2.44555,2.39442 -6.41059,2.39445 -8.85616,6e-5 -1e-5,-1e-5 -3e-5,-2e-5 -4e-5,-3e-5 l -57.35414,-56.15458 c -0.61139,-0.5986 -1.60265,-0.5986 -2.21404,0 0,10e-6 -1e-5,10e-6 -1e-5,2e-5 l -57.352921,56.15453 c -2.445537,2.39443 -6.410576,2.39447 -8.856161,8e-5 -1.5e-5,-1e-5 -3e-5,-2e-5 -4.5e-5,-4e-5 L 1.8719633,103.24679 c -2.44556024,-2.39441 -2.44556024,-6.276516 0,-8.670925 L 19.793693,77.028998 c 2.44556,-2.394408 6.410599,-2.394408 8.85616,0 l 57.354978,56.155352 c 0.61139,0.59861 1.602649,0.59861 2.214039,0 1e-5,0 1.8e-5,-1e-5 2.7e-5,-2e-5 L 145.571,77.028998 c 2.4455,-2.394463 6.41054,-2.394553 8.85616,-2e-4 3e-5,3.4e-5 7e-5,6.7e-5 1e-4,1.01e-4 l 57.3549,56.155431 c 0.61139,0.5986 1.60265,0.5986 2.21404,0 l 57.35398,-56.154324 c 2.44556,-2.394409 6.4106,-2.394409 8.85616,0 z"
+         id="WalletConnect" />
+    </g>
+  </g>
+</svg>
