@@ -5,7 +5,37 @@ ShadowTokens is a cross-chain bridge between Elastos and Ethereum, enabling user
 1. Provide another scaling option for Ethereum via Elastos's EVM-comptabile Smart Contract sidechain (negligible fees, secured by over 50% of Bitcoin's hashpower plus DPoS).
 2. Enable Elastos to take full advantage of the tokens native to Ethereum, such as stablecoins, for use in DeFi applications (TokSwap, Quicksilver, etc.).
 
-ShadowTokens plans to develop more bridges in the future to provide interoperability for isolated blockchains. The smart contracts for this application use the multi-token extension for the Arbitrary Message Bridge, which has been audited and used for a variety of existing bridges (xDai, POA). For more information about this implementation, please visit https://docs.tokenbridge.net/. 
+ShadowTokens plans to develop more bridges in the future to provide interoperability for isolated blockchains. The smart contracts for this application use the multi-token extension for the Arbitrary Message Bridge. For more information about this implementation, please visit https://docs.tokenbridge.net/. 
+
+## How to Fund the Elastos Smart Contract Sidechain
+
+The deposit and withraw tool may be found by toggling the switch in the toolbar (see the arrow picutured below).
+
+### Deposit
+
+To deposit ELA to the Smart Contract sidechain, send native ELA to the address provided by scanning the QR code or entering the address in your wallet of choice.
+
+![shadowtokens_github](/src/assets/docs/sidechain_1.png)
+
+*Note: This address is one time use. Do not send multiple payments to this address or you may risk losing your funds.*
+
+It will take a few minutes for the deposit to be received and tracked by the interface. Once received, the next page will appear. There are no more actions required. Simply wait for the deposit to complete. It may take 10-15 minutes for larger transfers.
+
+![shadowtokens_github](/src/assets/docs/sidechain_2.png)
+
+
+### Withdraw
+
+To withdraw ELA from the Smart Contract sidechain select the 'Withdraw' tab, enter the amount you want to withdraw from your MetaMask wallet, and the enter mainchain address where you want to receive your ELA. Click withdraw and you will be prompted to confirm the transaction.
+
+![shadowtokens_github](/src/assets/docs/sidechain_3.png)
+
+*Note: CryptoName is supported in the address field, so if you own one you can type it in the field to retrieve your address.*
+
+That's it. Monitor the status field to view your withdrawal progress. 
+
+![shadowtokens_github](/src/assets/docs/sidechain_4.png)
+
 
 ## Visual Guide
 
@@ -74,35 +104,31 @@ To return your ELA on Ethereum back to the Elastos Smart Contract chain, simply 
 
 That's it. You can now repeat this process to bridge any token between the Elastos and Ethereum ecosystems. Enjoy!
 
+## Contracts
 
+#### Bridge Contracts
+- [ ELA ] HomeBridge: 0x4490ee96671855BD0a52Eb5074EC5569496c0162 (HomeAMB)
+- [ ETH ] ForeignBridge: 0x4FA2EBF8aC682f30AAfaef1048C86DfD0887f1c8 (ForeignAMB)
 
+- [ ELA ] Validator: 0x2823B7Ae073cbd74458263328e89386B4e87a477 (BridgeValidators)
+- [ ETH ] Validator: 0xf471f4bEED9C74C70ce7Ac4810B8C17922329150 (BridgeValidators)
 
+#### ERC20 to ERC20 (ETH->ELA)
+- [ ELA ] Bridge Mediator: 0xe6fd75ff38Adca4B97FBCD938c86b98772431867 (HomeMultiAMBErc20ToErc677)
+- [ ETH ] Bridge Mediator: 0xfBec16ac396431162789FF4b5f65F47978988D7f (ForeignMultiAMBErc20ToErc677)
 
-## How to Fund the Elastos Smart Contract Sidechain
+#### ERC20 to ERC20 (ELA->ETH)
+- [ ETH ] Bridge Mediator: 0x6Ae6B30F6bb361136b0cC47fEe25E44B7d58605c (HomeMultiAMBErc20ToErc677)
+- [ ELA ] Bridge Mediator: 0x0054351c99288D37B96878EDC2319ca006c8B910 (ForeignMultiAMBErc20ToErc677)
 
-The deposit and withraw tool may be found by toggling the switch in the toolbar (see the arrow picutured below).
+#### Native To ERC20 (ELA->ETH)
+- [ ELA ] Bridge Mediator: 0xE235CbC85e26824E4D855d4d0ac80f3A85A520E4 (HomeAMBNativeToErc20)
+- [ ELA ] Fee Manager: 0xFe1cAD4E0117810162664A01Fd8D3a8B4Eb0872d
+- [ ETH ] Bridge Mediator: 0x88723077663F9e24091D2c30c2a2cE213d9080C6 (ForeignAMBNativeToErc20)
+- [ ETH ] ERC677 Token: 0xe6fd75ff38Adca4B97FBCD938c86b98772431867 (ELA on Ethereum)
 
-### Deposit
-
-To deposit ELA to the Smart Contract sidechain, send native ELA to the address provided by scanning the QR code or entering the address in your wallet of choice.
-
-![shadowtokens_github](/src/assets/docs/sidechain_1.png)
-
-*Note: This address is one time use. Do not send multiple payments to this address or you may risk losing your funds.*
-
-It will take a few minutes for the deposit to be received and tracked by the interface. Once received, the next page will appear. There are no more actions required. Simply wait for the deposit to complete. It may take 10-15 minutes for larger transfers.
-
-![shadowtokens_github](/src/assets/docs/sidechain_2.png)
-
-
-### Withdraw
-
-To withdraw ELA from the Smart Contract sidechain select the 'Withdraw' tab, enter the amount you want to withdraw from your MetaMask wallet, and the enter mainchain address where you want to receive your ELA. Click withdraw and you will be prompted to confirm the transaction.
-
-![shadowtokens_github](/src/assets/docs/sidechain_3.png)
-
-*Note: CryptoName is supported in the address field, so if you own one you can type it in the field to retrieve your address.*
-
-That's it. Monitor the status field to view your withdrawal progress. 
-
-![shadowtokens_github](/src/assets/docs/sidechain_4.png)
+#### Native To ERC20 (ETH->ELA) 
+- [ ETH ] Bridge Mediator: 0xf127003ea39878EFeEE89aA4E22248CC6cb7728E (HomeAMBNativeToErc20)
+- [ ETH ] Fee Manager: 0x18f1115EE9F30BE4Bd0b045a57e7455e84115ec2 (HomeFeeManagerAMBNativeToErc20_flat)
+- [ ELA ] Bridge Mediator: 0x314dfec1Fb4de1e0Be70F260d0a065E497f7E2eB (ForeignAMBNativeToErc20)
+- [ ELA ] ERC677 Token: 0x802c3e839E4fDb10aF583E3E759239ec7703501e (ETH on Elastos)
