@@ -47,6 +47,51 @@ This ShadowTokens interface is intended to be a user-friendly tool to map your a
 
 ![shadowtokens_github](/src/assets/docs/1.png)
 
+There are two public node can be used.
+
+Network Name: 
+
+```
+ELA sidechain
+```
+
+Symbol: 
+
+```
+ELA
+```
+
+ChainID: 
+
+```
+0x14
+```
+New RPC URL: 
+
+```
+https://escrpc.elaphant.app
+```
+
+or
+
+```
+https://mainrpc.elaeth.io
+```
+
+Block Explorer URL: 
+
+```
+https://escscan.elaphant.app
+```
+
+or
+
+```
+https://explorer.elaeth.io
+```
+
+Above is the network setting.
+
 Once connected, you will see your address populated in the header and your ELA balance displayed by the 'Max' button. You will notice two separate fields, the top one representing assets on the source network (Elastos), and the bottom one representing assets on the desination network (Ethereum). 
 
 ![shadowtokens_github](/src/assets/docs/2.png)
