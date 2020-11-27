@@ -41,7 +41,7 @@ That's it. Monitor the status field to view your withdrawal progress.
 
 This ShadowTokens interface is intended to be a user-friendly tool to map your assets between chains. A demonstration of moving ELA from Elastos to Ethereum and back is provided below. Please note that 'ELA' refers to ELA on the Elastos Smart Contract sidechain, not the Mainchain. If you need to fund the Smart Contract sidechain with ELA first, a tool for that is also available on Shadowtokens.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HJgf09VLhKc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![ShadowTokens Tutorial - A new cross-chain bridge between Elastos and Ethereum!](http://img.youtube.com/vi/HJgf09VLhKc/0.jpg)](http://www.youtube.com/watch?v=HJgf09VLhKc "ShadowTokens Tutorial - A new cross-chain bridge between Elastos and Ethereum!")
 
 ### Transfer ELA from Elastos to Ethereum
 
