@@ -154,30 +154,4 @@ To return your ELA on Ethereum back to the Elastos Smart Contract chain, simply 
 That's it. You can now repeat this process to bridge any token between the Elastos and Ethereum ecosystems. Enjoy!
 
 ## Contracts
-
-#### Bridge Contracts
-- [ ELA ] HomeBridge: 0x4490ee96671855BD0a52Eb5074EC5569496c0162 (HomeAMB)
-- [ ETH ] ForeignBridge: 0x4FA2EBF8aC682f30AAfaef1048C86DfD0887f1c8 (ForeignAMB)
-
-- [ ELA ] Validator: 0x2823B7Ae073cbd74458263328e89386B4e87a477 (BridgeValidators)
-- [ ETH ] Validator: 0xf471f4bEED9C74C70ce7Ac4810B8C17922329150 (BridgeValidators)
-
-#### ERC20 to ERC20 (ETH->ELA)
-- [ ELA ] Bridge Mediator: 0xe6fd75ff38Adca4B97FBCD938c86b98772431867 (HomeMultiAMBErc20ToErc677)
-- [ ETH ] Bridge Mediator: 0xfBec16ac396431162789FF4b5f65F47978988D7f (ForeignMultiAMBErc20ToErc677)
-
-#### ERC20 to ERC20 (ELA->ETH)
-- [ ETH ] Bridge Mediator: 0x6Ae6B30F6bb361136b0cC47fEe25E44B7d58605c (HomeMultiAMBErc20ToErc677)
-- [ ELA ] Bridge Mediator: 0x0054351c99288D37B96878EDC2319ca006c8B910 (ForeignMultiAMBErc20ToErc677)
-
-#### Native To ERC20 (ELA->ETH)
-- [ ELA ] Bridge Mediator: 0xE235CbC85e26824E4D855d4d0ac80f3A85A520E4 (HomeAMBNativeToErc20)
-- [ ELA ] Fee Manager: 0xFe1cAD4E0117810162664A01Fd8D3a8B4Eb0872d
-- [ ETH ] Bridge Mediator: 0x88723077663F9e24091D2c30c2a2cE213d9080C6 (ForeignAMBNativeToErc20)
-- [ ETH ] ERC677 Token: 0xe6fd75ff38Adca4B97FBCD938c86b98772431867 (ELA on Ethereum)
-
-#### Native To ERC20 (ETH->ELA) 
-- [ ETH ] Bridge Mediator: 0xf127003ea39878EFeEE89aA4E22248CC6cb7728E (HomeAMBNativeToErc20)
-- [ ETH ] Fee Manager: 0x18f1115EE9F30BE4Bd0b045a57e7455e84115ec2 (HomeFeeManagerAMBNativeToErc20_flat)
-- [ ELA ] Bridge Mediator: 0x314dfec1Fb4de1e0Be70F260d0a065E497f7E2eB (ForeignAMBNativeToErc20)
-- [ ELA ] ERC677 Token: 0x802c3e839E4fDb10aF583E3E759239ec7703501e (ETH on Elastos)
+Please check the tokenbridge-contracts branch of this repository for contract-related information
