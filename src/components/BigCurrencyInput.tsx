@@ -11,7 +11,7 @@ const styles: Styles<any, any> = () => ({
     width: "100%",
     "& input": {
       fontFamily: "inherit",
-      color: "#fff",
+      color: "#000",
       // fontSize: 18
     },
   },
@@ -21,8 +21,7 @@ const styles: Styles<any, any> = () => ({
     width: "100%",
     outline: "none",
     textAlign: "left",
-    background: "rgb(32,32,32)",
-    color: theme.palette.info.contrastText,
+    color: "#000",
     border: "none",
   },
 });

@@ -16,7 +16,7 @@ const StyledLink = styled.a`
     text-decoration: none;
   }
   :visited {
-    color: #c3c5cb;
+    color: #fff;
   }
 `;
 

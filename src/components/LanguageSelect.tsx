@@ -62,8 +62,8 @@ const Wrapper = styled.div`
   margin-left: 8px;
   margin-right: 8px;
   padding: 8px;
-  background-color: rgb(36, 36, 36);
-  border: 1px solid rgb(66, 66, 66);
+  background-color: #3CBEED;
+  border: 1px solid #3CBEED;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -112,13 +112,13 @@ const RoundButton = withStyles({
     height: 38,
     minWidth: 48,
     textTransform: "none",
-    border: "1px solid rgb(66,66,66)",
+    border: "1px solid #3CBEED",
     borderRadius: 8,
-    backgroundColor: "rgb(36,36,36)",
+    backgroundColor: "#3CBEED",
     paddingTop: 5,
     paddingBottom: 5,
     "&:hover": {
-      backgroundColor: "rgb(66,66,66)",
+      backgroundColor: "#27A6C9",
     },
   },
 })(Button);

@@ -31,7 +31,7 @@ import {
 
 const NoCapsButton = withStyles({
   root: {
-    textTransform: "none",
+    textTransform: "none"
   },
 })(Button);
 
@@ -235,10 +235,12 @@ const TokenSelectorModal: React.FC<Props> = function (props) {
             alt={active[direction].name}
             className={classes.icon}
           />
-          <span className={classes.assetSymbol}>
+          <span className={classes.assetSymbol} style={{ color: "#000" }}>
             {active[direction].symbol}
           </span>
-          <ArrowDropDown />
+          <ArrowDropDown
+            color="primary"
+          />
         </Grid>
       </NoCapsButton>
       <Dialog

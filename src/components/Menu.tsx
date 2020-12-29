@@ -10,20 +10,20 @@ import ExternalLink from "./ExternalLink";
 
 const StyledMenuIcon = styled(MenuIcon)`
   path {
-    stroke: #ffffff;
+    stroke: #fff;
   }
 `;
 
 const StyledMenuButton = styled.button`
-  background-color: rgb(36, 36, 36);
+  background-color: #3CBEED;
   margin: 0;
   padding: 0;
   height: 38px;
   padding: 0 0.5rem;
   border-radius: 8px;
-  border: 1px solid rgb(66, 66, 66) !important;
+  border: 1px solid #3CBEED !important;
   :hover {
-    background-color: rgb(66, 66, 66);
+    background-color: #27A6C9;
   }
   :focus {
     cursor: pointer;
@@ -46,9 +46,9 @@ const StyledMenu = styled.div`
 
 const MenuFlyout = styled.span`
   min-width: 8.125rem;
-  background-color: rgb(36, 36, 36);
+  background-color: #3CBEED;
   border-radius: 8px;
-  border: 1px solid rgb(66, 66, 66);
+  border: 1px solid #3CBEED;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ const MenuFlyout = styled.span`
 const MenuItem = styled(ExternalLink)`
   flex: 1;
   padding: 0.5rem 0.5rem;
-  color: #c3c5cb;
+  color: #fff;
   :hover {
     color: #ffffff;
     cursor: pointer;
@@ -76,7 +76,7 @@ const MenuItem = styled(ExternalLink)`
 const AboutItem = styled.span`
   flex: 1;
   padding: 0.5rem 0.5rem;
-  color: #c3c5cb;
+  color: #fff;
   :hover {
     color: #ffffff;
     cursor: pointer;
@@ -111,14 +111,14 @@ export default function Menu() {
           </AboutItem>
           <MenuItem
             id="link"
-            href="https://github.com/elaphantapp/ShadowTokens"
+            href="https://github.com/nekomeowww/ShadowTokens"
           >
             <BookOpen size={14} />
             {t("Nav.Docs")}
           </MenuItem>
           <MenuItem
             id="link"
-            href="https://github.com/elaphantapp/ShadowTokens"
+            href="https://github.com/nekomeowww/ShadowTokens"
           >
             <Code size={14} />
             {t("Nav.Code")}

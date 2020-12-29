@@ -94,36 +94,37 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     marginRight: theme.spacing(2),
   },
   navButtons: {
+    color: '#000',
     justifyContent: "flex-end",
     [theme.breakpoints.down("xs")]: {
       // justifyContent: "center",
     },
   },
   walletActive: {
-    borderColor: "rgb(66, 66, 66)",
-    backgroundColor: "rgb(32,32,32)",
+    borderColor: "#6EEDDD",
+    backgroundColor: "#6EEDDD",
     "&:hover": {
       // backgroundColor: "rgb(54,54,54)",
       borderColor: theme.palette.primary.main,
     },
   },
   bridgeActive: {
-    borderColor: "rgb(66, 66, 66)",
-    backgroundColor: "rgb(32,32,32)",
+    borderColor: "#3CBEED",
+    backgroundColor: "#3CBEED",
     "&:hover": {
-      // backgroundColor: "rgb(54,54,54)",
-      borderColor: theme.palette.secondary.main,
+      backgroundColor: "#67C0B1",
+      borderColor: '#6EEDDD',
     },
   },
   walletButtonText: {
     fontSize: 14,
-    color: "#fff",
+    color: theme.palette.primary.contrastText,
     marginRight: 4,
     marginLeft: 4,
   },
   bridgeButtonText: {
     fontSize: 14,
-    color: "#fff",
+    color:  '#fff',
     marginRight: 4,
     marginLeft: 4,
   },

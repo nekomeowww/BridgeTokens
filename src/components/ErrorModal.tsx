@@ -18,7 +18,8 @@ import { Translate } from "./Translate";
 const styles: Styles<typeof theme, any> = (theme) => ({
   container: {
     textAlign: "center",
-    background: "rgb(36,36,36)",
+    background: "#fff",
+    border: "1px solid #3CBEED",
     borderRadius: "30px",
     width: 350,
     padding: theme.spacing(3),
@@ -43,11 +44,11 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     },
   },
   successText: {
-    color: "#fff",
+    color: "#4CAF50",
     fontSize: 18,
   },
   walletText: {
-    color: "#fff",
+    color: "#000",
     fontSize: 18,
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
@@ -59,11 +60,11 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   },
   confirmationText: {
     // color: theme.palette.info.contrastText,
-    color: "#fff",
+    color: "#000",
     fontSize: 16,
   },
   confirmationCount: {
-    color: "#fff",
+    color: "#000",
     fontSize: 16,
   },
   dismissContainer: {

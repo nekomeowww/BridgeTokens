@@ -17,7 +17,8 @@ import theme from "../theme/theme";
 const styles: Styles<typeof theme, any> = (theme) => ({
   container: {
     textAlign: "center",
-    background: "rgb(36,36,36)",
+    background: "#fff",
+    border: "1px solid #67C0B1",
     borderRadius: "30px",
     width: 450,
     padding: theme.spacing(3),
@@ -75,7 +76,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
       },
       "&.selected": {
         opacity: 1,
-        borderColor: theme.palette.primary.contrastText,
+        borderColor: "#67C0B1",
         boxShadow: theme.shadows[0],
       },
     },
@@ -104,7 +105,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   },
   walletLabel: {
     paddingTop: theme.spacing(1),
-    color: "#fff",
+    color: "#67C0B1",
     textTransform: "uppercase",
     fontSize: 11.5,
     fontWeight: "bold",
@@ -278,12 +279,12 @@ class WalletModal extends React.Component<any> {
                   </div>
                 )} */}
                 {!walletConnected ? (
-                  <div>
+                  <div style={{ color: "#fff" }}>
                     <Translate text="Wallet.Connect" />
                     &nbsp;{walletType}
                   </div>
                 ) : (
-                  <div>
+                  <div style={{ color: "#fff" }}>
                     <Translate text="Wallet.Disconnect" />
                   </div>
                 )}

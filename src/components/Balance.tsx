@@ -28,8 +28,8 @@ const styles: Styles<any, any> = () => ({
     },
   },
   secondary: {
-    color: "rgb(200, 83, 103, 1)",
-    border: "1px solid rgba(200, 83, 103, 0.5)",
+    color: "#67C0B1",
+    border: "1px solid #6EEDDD",
     "&:hover": {
       cursor: "pointer",
       border: "1px solid rgb(200, 83, 103, 1)",

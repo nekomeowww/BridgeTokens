@@ -9,20 +9,22 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   switchContainer: {
     height: 36,
     minWidth: 48,
-    border: "1px solid rgb(66,66,66)",
+    border: "1px solid #3CBEED",
     borderRadius: 8,
-    backgroundColor: "rgb(36,36,36)",
+    backgroundColor: "#3CBEED",
     marginLeft: 6,
   },
 });
 
 const CustomSwitch = withStyles({
   switchBase: {
-    color: theme.palette.secondary.main,
+    color: '#fff',
   },
-  checked: {},
+  checked: {
+    color: '#6EEDDD'
+  },
   track: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.contrastText,
   },
 })(Switch);
 

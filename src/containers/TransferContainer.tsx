@@ -35,7 +35,8 @@ import { Translate } from "../components/Translate";
 const styles: Styles<typeof theme, any> = (theme) => ({
   container: {
     textAlign: "center",
-    background: "rgb(32,32,32)",
+    background: "#fff", // Later Change
+    border: "1px solid #3CBEED",
     borderRadius: "30px",
     width: 500,
     margin: "0px auto " + theme.spacing(1) + "px",
@@ -96,7 +97,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     paddingBottom: theme.spacing(3),
   },
   standaloneOption: {
-    border: "1px solid" + theme.palette.divider,
+    border: "1px solid #3CBEED",
     borderRadius: 12,
     boxShadow: "0px 1px 2px rgba(0, 27, 58, 0.05)",
   },
@@ -149,7 +150,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   },
   sourceLabel: {
     fontSize: 14,
-    color: theme.palette.primary.contrastText,
+    color: 'rgba(0, 0, 0, 0.6)',
     "&:hover": {
       cursor: "pointer",
     },
@@ -162,6 +163,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     },
   },
   destAssetTicker: {
+    color: "#000",
     fontSize: 17.5,
   },
   destAssetText: {
@@ -494,67 +496,6 @@ class TransferContainer extends React.Component<any> {
                 </Grid>
               </Grid>
 
-              {/* Destination Address input */}
-              <Grid>
-                <div className={classes.addressInput}>
-                  <TextField
-                    color={selectedDirection ? "secondary" : "primary"}
-                    label={<Translate text="Transfer.Destination" />}
-                    placeholder={
-                      localWeb3Address && localWeb3Address.length > 0
-                        ? localWeb3Address
-                        : placeholder
-                    }
-                    size="medium"
-                    fullWidth={true}
-                    error={showDestinationError}
-                    helperText={showDestinationError ? inputError : ""}
-                    InputProps={{ disableUnderline: true }}
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                    inputProps={{
-                      onFocus: () => {
-                        store.set("convert.destinationInputFocused", true);
-                      },
-                      onBlur: () => {
-                        store.set("convert.destinationInputFocused", false);
-                      },
-                    }}
-                    onChange={(event) => {
-                      const value = event.target.value;
-                      let address = value;
-                      if (value.length > 0) {
-                        store.set("convert.destination", value);
-                      } else {
-                        address = localWeb3Address;
-                        store.set("convert.destination", localWeb3Address);
-                      }
-                      // Address validator hard coded to ethereum
-                      const isValidAddress = AddressValidator.validate(
-                        address,
-                        "ETH",
-                        "prod"
-                      );
-
-                      if (isValidAddress) {
-                        isContractAddress(address).then((isContract) => {
-                          if (!isContract) {
-                            store.set("convert.destinationValid", true);
-                            store.set("convert.showDestinationError", false);
-                          } else {
-                            store.set("convert.showDestinationError", true);
-                          }
-                        });
-                      } else {
-                        store.set("convert.showDestinationError", true);
-                        store.set("convert.destinationValid", false);
-                      }
-                    }}
-                  />
-                </div>
-              </Grid>
-
               {/* Button */}
               <Grid
                 container
@@ -574,7 +515,7 @@ class TransferContainer extends React.Component<any> {
                         store.set("showWalletModal", true);
                       }}
                     >
-                      <Translate text="Transfer.Connect" />
+                      <span style={{ color: "#fff" }}><Translate text="Transfer.Connect" /></span>
                     </Button>
                   ) : (
                     <div>
