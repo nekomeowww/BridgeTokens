@@ -14,21 +14,21 @@ export const WALLET_ICON_MAP: { [key in string]: string } = {
 
 export const SUPPORTED_NETWORK_IDS: { [key in number]: string } = {
     1: 'Ethereum',
+    4: 'Rinkeby',
     20: 'Elastos',
     21: 'Elastos Testnet',
-    42: 'Kovan',
 }
 
 export const EXPLORER_URLS: { [key in string]: string } = {
     "Ethereum": "https://etherscan.io",
-    "Kovan": "https://kovan.etherscan.io",
+    "Rinkeby": "https://rinkeby.etherscan.io",
     "Elastos": "https://explorer.elaeth.io",
     "Elastos Testnet": "https://testnet.elaeth.io",
 }
 
 export const SUPPORTED_RPC_URLS: { [key in string]: string } = {
     'Ethereum': "https://api-eth.elaphant.app/api/1/eth/wrap", //`https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
-    'Kovan': `https://kovan.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
+    'Rinkeby': `https://rinkeby.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
     'Elastos': "https://mainrpc.elaeth.io",
     'Elastos Testnet': "https://rpc.elaeth.io",
 }

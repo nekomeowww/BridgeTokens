@@ -43,7 +43,7 @@ export const ELA_DEFAULTS = [
 ]
 
 ///////////////////////////////////////////
-/// Dev mode: Kovan and Elastos Testnet ///
+/// Dev mode: Rinkeby and Elastos Testnet ///
 ///////////////////////////////////////////
 
 export const ETH_DEV_DEFAULTS = [

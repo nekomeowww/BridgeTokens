@@ -68,9 +68,9 @@ export const initLocalWeb3 = async function(type?: any) {
             const provider: any = new WalletConnectProvider({
                 rpc: {
                     1: SUPPORTED_RPC_URLS["Ethereum"],
+                    4: SUPPORTED_RPC_URLS["Rinkeby"],
                     20: SUPPORTED_RPC_URLS["Elastos"],
                     21: "https://rpc.elaeth.io",
-                    42: SUPPORTED_RPC_URLS["Kovan"],
                 }
             });
             await provider.enable();
@@ -265,7 +265,7 @@ export const getDefaultTokens = (network: string) => {
             return ETH_DEFAULTS
         case 'Elastos':
             return ELA_DEFAULTS
-        case 'Kovan':
+        case 'Rinkeby':
             return ETH_DEV_DEFAULTS
         case 'Elastos Testnet':
             return ELA_DEV_DEFAULTS
@@ -337,7 +337,7 @@ const getHomeNetwork = (networkID: number) => {
             return 1
         case 1:
             return 0
-        case 42:
+        case 4:
             return 0
     }
 }
@@ -348,12 +348,12 @@ const getPairNetwork = (networkID: number, type: 'id' | 'name') => {
             if (type === 'id') return 1
             return 'Ethereum'
         case 21:
-            if (type === 'id') return 42
-            return 'Kovan'
+            if (type === 'id') return 4
+            return 'Rinkeby'
         case 1:
             if (type === 'id') return 20
             return 'Elastos'
-        case 42:
+        case 4:
             if (type === 'id') return 21
             return 'Elastos Testnet'
     }
@@ -374,8 +374,8 @@ export const setBridgeDirection = async function(netId: number) {
             if (selectedDirection === 0) { fetchTokenBalance(token); return }
             switchOriginChain(selectedDirection)
             break
-        case 42:
-            store.set("localWeb3Network", "Kovan")
+        case 4:
+            store.set("localWeb3Network", "Rinkeby")
             if (selectedDirection === 0) { fetchTokenBalance(token); return }
             switchOriginChain(selectedDirection)
             break
