@@ -21,9 +21,9 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #585861;
+  color: #292929;
   min-height: 100vh;
-  background-image: linear-gradient(115deg, #263040 0%, #2c2123 80%);
+  background-image: linear-gradient(148deg, #ffffff 0%, #dcfdff 80%);
   background-repeat: no-repeat;
 }
 

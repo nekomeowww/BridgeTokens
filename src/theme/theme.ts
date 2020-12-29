@@ -19,26 +19,26 @@ export default createMuiTheme({
         primary: {
             light: "#8DFEFF",
             main: "rgb(13, 129, 207, 1)",
-            dark: "#404040",
-            contrastText: "#fff",
+            dark: "#3CBEED",
+            contrastText: "#000",
         },
         secondary: {
             light: "#ff0",
-            main: "rgb(200, 83, 103, 1)",
-            dark: "#404040",
-            contrastText: "#fff",
+            main: "#67C0B1",
+            dark: "#6EEDDD",
+            contrastText: "#000",
         },
         info: {
             light: "rgb(66,66,66)",
             main: "#606060",
             dark: "rgb(36,36,36)",
-            contrastText: "rgba(255, 255, 255, 0.5)",
+            contrastText: "rgba(20, 159, 210, 0.75)", // alpha 50% of #3CBEED Blue
         },
         success: {
             light: "#32ce7cff",
             main: "#0aab6eff",
             dark: "#404040",
-            contrastText: "#fff",
+            contrastText: "#000",
         },
         divider: "#606060",
     },
@@ -133,7 +133,7 @@ export default createMuiTheme({
         MuiMenu: {
             paper: {
                 boxShadow: "0px 1px 3px rgba(0, 27, 58, 0.1)",
-                border: "1px solid #606060",
+                border: "1px solid #3CBEED",
                 borderRadius: 8,
                 backgroundColor: "rgb(32,32,32)",
                 minWidth: 160,
