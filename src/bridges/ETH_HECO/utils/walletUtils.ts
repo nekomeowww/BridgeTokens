@@ -229,6 +229,7 @@ export const uniqueTokens = (list: any) => {
 };
 
 export const appendCustomTokens = (defaultTokens: any) => {
+    console.log(defaultTokens)
     const store = getStore();
     const network = store.get("localWeb3Network");
     const direction = store.get("convert.selectedDirection");

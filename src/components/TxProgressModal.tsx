@@ -12,7 +12,7 @@ import ActionLink from "../components/ActionLink";
 import {
   getExplorerLink,
   restoreInitialState,
-} from "../bridges/ETH_ELA/utils/txUtils";
+} from "../bridges/ETH_HECO/utils/txUtils";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
@@ -118,7 +118,7 @@ const SuccessButton = withStyles({
     color: theme.palette.success.light,
     borderColor: theme.palette.success.light,
     "&:hover": {
-      backgroundColor: "rgb(32,32,32)",
+      backgroundColor: "#3CBEED",
     },
   },
 })(Button);

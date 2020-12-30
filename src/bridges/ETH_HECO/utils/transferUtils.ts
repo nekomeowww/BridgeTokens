@@ -10,6 +10,7 @@ import AMB_NATIVE_ERC_ABI from "../abis/AMB_NATIVE_ERC_ABI.json";
 import MULTI_AMB_ERC_ERC_ABI from "../abis/MULTI_AMB_ERC_ERC_ABI.json";
 import { MEDIATOR_CONTRACTS } from "./contracts";
 
+/** 处理交易 */
 export const handleBridgeMode = function(confirmTx: any) {
     const contracts = getMediatorContracts(confirmTx)
     switch (contracts.bridgeMode) {
@@ -142,8 +143,9 @@ export const nativeTransfer = async function(confirmTx: any, contracts: any) {
                 store.set("confirmationStep", 1);
             })
             .on('confirmation', function(confirmationNumber: number, receipt: any) {
-                const confirmed = updateRelayConfirmations(confirmationNumber, mediatorConfs)
-                if (confirmed) detectExchangeFinished(confirmTx.destAddress, value, contracts.dest, confirmTx.destNetwork, "amb_native_erc")
+                console.log('confirmed')
+                // const confirmed = updateRelayConfirmations(confirmationNumber, mediatorConfs)
+                // if (confirmed) detectExchangeFinished(confirmTx.destAddress, value, contracts.dest, confirmTx.destNetwork, "amb_native_erc")
             })
             .on('error', function(error: any) {
                 if (error.code === 4001) {

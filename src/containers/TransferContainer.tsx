@@ -11,12 +11,12 @@ import Burn from "../assets/burn.svg";
 import {
   gatherFeeData,
   switchOriginChain,
-} from "../bridges/ETH_ELA/utils/txUtils";
+} from "../bridges/ETH_HECO/utils/txUtils";
 import {
   fetchTokenBalance,
   isSelectedNetwork,
   isContractAddress,
-} from "../bridges/ETH_ELA/utils/walletUtils";
+} from "../bridges/ETH_HECO/utils/walletUtils";
 import i18n from "i18next";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -102,7 +102,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     boxShadow: "0px 1px 2px rgba(0, 27, 58, 0.05)",
   },
   option: {
-    color: "#fff",
+    color: "#000",
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(0.5),
     paddingLeft: theme.spacing(2),
@@ -184,6 +184,9 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   padding: {
     paddingRight: 12,
   },
+  blaclText: {
+    color: "#000"
+  }
 });
 
 class TransferContainer extends React.Component<any> {
@@ -208,6 +211,7 @@ class TransferContainer extends React.Component<any> {
     }
   }
 
+  /** 建立新的转账 */
   async newTransfer() {
     const { store } = this.props;
 
@@ -246,6 +250,7 @@ class TransferContainer extends React.Component<any> {
       txHash: "",
     };
 
+    console.log(tx)
     store.set("confirmTx", tx);
     store.set("confirmAction", token[direction].transferType);
   }
@@ -466,7 +471,7 @@ class TransferContainer extends React.Component<any> {
                       <Grid item zeroMinWidth>
                         <Typography
                           className={
-                            Number(amount) === 0 ? classes.grayText : null
+                            Number(amount) === 0 ? classes.grayText : classes.blackText
                           }
                           noWrap
                         >

@@ -14,8 +14,8 @@ import TxProgressModal from "../components/TxProgressModal";
 import ErrorModal from "../components/ErrorModal";
 import { Translate } from "../components/Translate";
 import theme from "../theme/theme";
-import { abbreviateAddress } from "../bridges/ETH_ELA/utils/walletUtils";
-import { handleBridgeMode } from "../bridges/ETH_ELA/utils/transferUtils";
+import { abbreviateAddress } from "../bridges/ETH_HECO/utils/walletUtils";
+import { handleBridgeMode, getMediatorContracts } from "../bridges/ETH_HECO/utils/transferUtils";
 
 const styles: Styles<typeof theme, any> = (theme) => ({
   container: {
@@ -160,6 +160,7 @@ class ConfirmContainer extends React.Component<any> {
     // const confirmAction = store.get("confirmAction");
     // const isDeposit = confirmAction === "deposit";
     const confirmTx = store.get("confirmTx");
+    console.log(getMediatorContracts(confirmTx))
     const selectedWallet = store.get("selectedWalletType");
     const token = store.get("token");
     const selectedDirection = store.get("convert.selectedDirection");

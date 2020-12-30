@@ -27,7 +27,7 @@ import {
   isSelectedNetwork,
   generateCustomTokenDetails,
   addCustomToken,
-} from "../bridges/ETH_ELA/utils/walletUtils";
+} from "../bridges/ETH_HECO/utils/walletUtils";
 
 const NoCapsButton = withStyles({
   root: {

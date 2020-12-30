@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import theme from "../theme/theme";
 import DoubleArrow from "../assets/double-arrow.svg";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import { WALLET_ICON_MAP } from "../bridges/ETH_ELA/utils/config";
+import { WALLET_ICON_MAP } from "../bridges/ETH_HECO/utils/config";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";

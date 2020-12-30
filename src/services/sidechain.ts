@@ -1,8 +1,8 @@
 import Web3 from "web3";
 import { getStore } from "./storeService";
 import { SIDECHAIN_TRANSFER_TIMEOUT, MAINCHAIN_RETURN_ADDRESS, SIDECHAIN_RELAY_ADDRESS } from "./config";
-import { SUPPORTED_RPC_URLS } from '../bridges/ETH_ELA/utils/config';
-import { formatValue } from '../bridges/ETH_ELA/utils/txUtils';
+import { SUPPORTED_RPC_URLS } from '../bridges/ETH_HECO/utils/config';
+import { formatValue } from '../bridges/ETH_HECO/utils/txUtils';
 
 
 export const depositELA = async function() {
