@@ -548,7 +548,7 @@ class TransferContainer extends React.Component<any> {
                           }
                         }}
                       >
-                        <Translate text="Transfer.Next" />
+                        <span style={{ color: "#fff" }}><Translate text="Transfer.Next" /></span>
                       </Button>
                       {wrongNetwork && (
                         <div>

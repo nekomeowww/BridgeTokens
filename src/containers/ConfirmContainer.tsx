@@ -20,7 +20,8 @@ import { handleBridgeMode, getMediatorContracts } from "../bridges/ETH_HECO/util
 const styles: Styles<typeof theme, any> = (theme) => ({
   container: {
     textAlign: "center",
-    background: "rgb(32,32,32)",
+    background: "#fff",
+    border: "1px solid #3CBEED",
     borderRadius: "30px",
     width: 500,
     margin: "0px auto " + theme.spacing(1) + "px",
@@ -95,7 +96,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     },
   },
   fade: {
-    color: theme.palette.info.contrastText,
+    color: "#3CBEED",
   },
   titleAmount: {
     marginTop: theme.spacing(3),
@@ -104,7 +105,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
     },
   },
   headerText: {
-    color: "#fff",
+    color: "#404040",
     textAlign: "center",
     position: "relative",
     marginBottom: theme.spacing(2),
@@ -129,6 +130,7 @@ const styles: Styles<typeof theme, any> = (theme) => ({
   //   },
   // },
   amountCell: {
+    color: "#404040",
     wordBreak: "break-word",
   },
 });
@@ -260,7 +262,7 @@ class ConfirmContainer extends React.Component<any> {
                       <Translate text="Confirm.Destination" />
                     </Grid>
                     <Grid item xs={6}>
-                      {destNetwork}&nbsp;
+                      <span style={{ color: "#404040" }}>{destNetwork}</span>&nbsp;
                       <Translate text="Confirm.Network" />
                     </Grid>
                   </Grid>
@@ -271,7 +273,7 @@ class ConfirmContainer extends React.Component<any> {
                     </Grid>
                     <Grid item xs={6}>
                       <img alt={destAsset} src={token.icon} />
-                      {token[Number(!selectedDirection)].symbol}
+                      <span style={{ color: "#404040" }}>{token[Number(!selectedDirection)].symbol}</span>
                     </Grid>
                   </Grid>
 
@@ -286,7 +288,7 @@ class ConfirmContainer extends React.Component<any> {
                       >
                         <div>
                           <img src={WalletIcon} alt="Wallet" />
-                          {abbreviateAddress(confirmTx.destAddress)}
+                          <span style={{ color: "#404040" }}>{abbreviateAddress(confirmTx.destAddress)}</span>
                         </div>
                       </DarkTooltip>
                     </Grid>
@@ -335,7 +337,7 @@ class ConfirmContainer extends React.Component<any> {
                     store.set("convert.destination", "");
                   }}
                 >
-                  <Translate text="Confirm.Cancel" />
+                  <span style={{ color: "#fff" }}><Translate text="Confirm.Cancel" /></span>
                 </CancelButton>
               </Grid>
               <Grid item xs={6}>
@@ -351,7 +353,7 @@ class ConfirmContainer extends React.Component<any> {
                     handleBridgeMode(confirmTx);
                   }}
                 >
-                  <Translate text="Confirm.Start" />
+                  <span style={{ color: "#fff" }}><Translate text="Confirm.Start" /></span>
                 </Button>
               </Grid>
 
