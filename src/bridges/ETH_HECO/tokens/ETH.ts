@@ -3,26 +3,26 @@ import ETH_ICON from "../../../assets/eth.png";
 
 export const ETH = {
     0: {
-        symbol: 'ANT(From)',
-        name: 'EDC on ETH',
+        symbol: 'EDC (From)',
+        name: 'EarnDefiCoin',
         id: 'eth',
         transferType: 'mint',
-        network: 'Binance Testnet',
-        networkShortName: 'binanceTest',
-        networkID: 97,
-        address: '0xfE0b1b4bef7d1E43BE2B518e1A86dC07E17d997D', // 起始位置转账调用的合约，比如从 Binance 出发
+        network: 'Ethereum',
+        networkShortName: 'ethereum',
+        networkID: 1,
+        address: '0x68a0a1fef18dfcc422db8be6f0f486dea1999edc', // 起始位置转账调用的合约，比如从 Binance 出发
         confirmations: ETH_CONFIRMATIONS,
         fee: 0,
     },
     1: {
-        symbol: 'ANT(To)',
+        symbol: 'EDC (To)',
         name: 'EarnDefiCoin',
         id: 'huobi',
         transferType: 'release',
         network: 'Heco Mainnet',
         networkShortName: 'heco',
         networkID: 128,
-        address: '0x3d1a6da59d87e8fe650b959314fdec53e6da56f1', // 抵达位置转账调用的合约，可以不填
+        address: '0x68a0a1fef18dfcc422db8be6f0f486dea1999edc', // 抵达位置转账调用的合约，可以不填
         confirmations: ELA_CONFIRMATIONS,
         fee: 0,
     },
