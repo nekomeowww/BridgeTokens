@@ -65,12 +65,12 @@ export const initLocalWeb3 = async function(type?: any) {
             web3 = new Web3(web3Provider);
 
         } else if (type === "WalletConnect") {
+            // Change your network here
             const provider: any = new WalletConnectProvider({
                 rpc: {
                     1: SUPPORTED_RPC_URLS["Ethereum"],
-                    4: SUPPORTED_RPC_URLS["Rinkeby"],
-                    20: SUPPORTED_RPC_URLS["Elastos"],
-                    21: "https://rpc.elaeth.io",
+                    97: SUPPORTED_RPC_URLS["Binance Testnet"],
+                    128: SUPPORTED_RPC_URLS["Heco Mainnet"]
                 }
             });
             await provider.enable();
@@ -264,10 +264,10 @@ export const getDefaultTokens = (network: string) => {
     switch (network) {
         case 'Ethereum':
             return ETH_DEFAULTS
-        case 'Elastos':
+        case 'Binance Testnet':
+            return ETH_DEFAULTS
+        case 'Heco Mainnet':
             return ELA_DEFAULTS
-        case 'Rinkeby':
-            return ETH_DEV_DEFAULTS
         case 'Elastos Testnet':
             return ELA_DEV_DEFAULTS
         default:
@@ -332,30 +332,25 @@ const getRequiredConfirmations = (home: number) => {
 
 const getHomeNetwork = (networkID: number) => {
     switch (networkID) {
-        case 20:
-            return 1
-        case 21:
+        case 128:
             return 1
         case 1:
             return 0
-        case 4:
+        case 97:
             return 0
     }
 }
 
 const getPairNetwork = (networkID: number, type: 'id' | 'name') => {
     switch (networkID) {
-        case 20:
-            if (type === 'id') return 1
+        case 128:
+            if (type === 'id') return 97
             return 'Ethereum'
-        case 21:
-            if (type === 'id') return 4
-            return 'Rinkeby'
         case 1:
-            if (type === 'id') return 20
+            if (type === 'id') return 128
             return 'Elastos'
-        case 4:
-            if (type === 'id') return 21
+        case 97:
+            if (type === 'id') return 128
             return 'Elastos Testnet'
     }
 }
@@ -375,18 +370,13 @@ export const setBridgeDirection = async function(netId: number) {
             if (selectedDirection === 0) { fetchTokenBalance(token); return }
             switchOriginChain(selectedDirection)
             break
-        case 4:
-            store.set("localWeb3Network", "Rinkeby")
+        case 97:
+            store.set("localWeb3Network", "Binance Testnet")
             if (selectedDirection === 0) { fetchTokenBalance(token); return }
             switchOriginChain(selectedDirection)
             break
-        case 20:
-            store.set("localWeb3Network", "Elastos")
-            if (selectedDirection === 1) { fetchTokenBalance(token); return }
-            switchOriginChain(selectedDirection)
-            break
-        case 21:
-            store.set("localWeb3Network", "Elastos Testnet")
+        case 128:
+            store.set("localWeb3Network", "Heco Mainnet")
             if (selectedDirection === 1) { fetchTokenBalance(token); return }
             switchOriginChain(selectedDirection)
             break

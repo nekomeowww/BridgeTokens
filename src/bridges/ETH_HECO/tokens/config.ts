@@ -16,7 +16,7 @@ export const MULTI_AMB_ERC_ERC_DAILY_LIMIT = 15000000   // 150000000000000000000
 export const MULTI_AMB_ERC_ERC_FEE_HOME = 0 // Percentage
 export const MULTI_AMB_ERC_ERC_FEE_FOREIGN = 0 // Percentage
 export const AMB_NATIVE_ERC_FEE_HOME = 0 // Percentage
-export const AMB_NATIVE_ERC_FEE_FOREIGN = 0.1 // Percentage
+export const AMB_NATIVE_ERC_FEE_FOREIGN = 0 // Percentage
 
 
 // export const AMB_NATIVE_ERC_MIN_TX = 500000000000000000 // Wei

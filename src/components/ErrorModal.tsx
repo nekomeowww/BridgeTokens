@@ -232,7 +232,7 @@ const ErrorModal: React.FC<Props> = function (props) {
                     placement="right"
                     title={
                       <React.Fragment>
-                        {targetNetwork === "Elastos" && (
+                        {targetNetwork === "Heco Mainnet" && (
                           <>
                             <Typography color="inherit">
                               <u>
@@ -240,19 +240,19 @@ const ErrorModal: React.FC<Props> = function (props) {
                               </u>
                             </Typography>
                             <Typography color="inherit">
-                              <b>Name:</b> Elastos
+                              <b>Name:</b> EarnDefiCoin
                             </Typography>
                             <Typography color="inherit">
-                              <b>RPC URL:</b> https://mainrpc.elaeth.io
+                              <b>RPC URL:</b> https://http-mainnet.hecochain.com
                             </Typography>
                             <Typography color="inherit">
-                              <b>Chain ID:</b> 20
+                              <b>Chain ID:</b> 128
                             </Typography>
                             <Typography color="inherit">
-                              <b>Symbol:</b> ELA
+                              <b>Symbol:</b> EDC
                             </Typography>
                             <Typography color="inherit">
-                              <b>Explorer:</b> https://explorer.elaeth.io
+                              <b>Explorer:</b> https://scan.hecochain.com
                             </Typography>
                           </>
                         )}

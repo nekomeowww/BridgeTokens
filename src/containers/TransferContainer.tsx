@@ -205,7 +205,8 @@ class TransferContainer extends React.Component<any> {
     const inputAmount = Number(store.get("convert.amount"));
 
     if (inputAmount > balance) {
-      store.set("insufficientBalance", true);
+      // store.set("insufficientBalance", true);
+      this.newTransfer()
     } else {
       this.newTransfer();
     }
@@ -234,11 +235,13 @@ class TransferContainer extends React.Component<any> {
       sourceSymbol: token[direction].symbol,
       sourceAsset: token[direction].id,
       sourceNetwork: token[direction].network,
+      sourceNetworkShortName: token[direction].networkShortName,
       destAddress:
         receiveAddress.length > 0 ? receiveAddress : localWeb3Address,
       destSymbol: token[Number(!direction)].symbol,
       destAsset: token[Number(!direction)].id,
       destNetwork: token[Number(!direction)].network,
+      destNetworkShortName: token[Number(!direction)].networkShortName,
       bridgeMode: token.bridgeMode,
       icon: token.icon,
       decimals: token.decimals,
@@ -248,6 +251,7 @@ class TransferContainer extends React.Component<any> {
       confirmations: token[direction].confirmations,
       error: false,
       txHash: "",
+      direction: direction
     };
 
     console.log(tx)

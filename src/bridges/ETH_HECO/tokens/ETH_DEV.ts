@@ -3,25 +3,27 @@ import ETH_ICON from "../../../assets/eth.png";
 
 export const ETH_DEV = {
     0: {
-        symbol: 'ETH',
+        symbol: 'ANT',
         name: 'Ethereum',
-        id: 'eth',
+        id: 'bnb',
         transferType: 'mint',
-        network: 'Rinkeby',
-        networkID: 4,
-        address: '',
+        network: 'Binance Testnet',
+        networkShortName: 'binanceTest',
+        networkID: 97,
+        address: '0xfE0b1b4bef7d1E43BE2B518e1A86dC07E17d997D',
         confirmations: ETH_CONFIRMATIONS,
         fee: AMB_NATIVE_ERC_FEE_HOME,
 
     },
     1: {
-        symbol: 'ETH',
+        symbol: 'ANT',
         name: 'ETH on Elastos',
-        id: 'elaeth',
+        id: 'huobi',
         transferType: 'release',
-        network: 'Elastos Testnet',
-        networkID: 21,
-        address: '0xf7184E6449a522988D65F794fa53DA44Eddd78Fd',
+        network: 'Heco Mainnet',
+        networkShortName: 'heco',
+        networkID: 128,
+        address: '0x3d1a6da59d87e8fe650b959314fdec53e6da56f1',
         confirmations: ELA_CONFIRMATIONS,
         fee: AMB_NATIVE_ERC_FEE_FOREIGN,
 

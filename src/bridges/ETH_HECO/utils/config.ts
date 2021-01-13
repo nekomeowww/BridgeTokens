@@ -3,6 +3,8 @@ import Elaphant from "../../../assets/elaphant.png";
 import WalletConnect from "../../../assets/walletconnect.svg";
 import { ETH_DEFAULTS } from '../tokens'
 
+import { networks } from "../../../config"
+
 export const VALIDATOR_TIMEOUT = 300000 // Milliseconds
 export const PREAUTHORIZE_AMOUNT = 1000000 // Tokens
 
@@ -12,26 +14,11 @@ export const WALLET_ICON_MAP: { [key in string]: string } = {
     WalletConnect: WalletConnect,
 };
 
-export const SUPPORTED_NETWORK_IDS: { [key in number]: string } = {
-    1: 'Ethereum',
-    4: 'Rinkeby',
-    20: 'Elastos',
-    21: 'Elastos Testnet',
-}
+export const SUPPORTED_NETWORK_IDS: { [key in number]: string } = networks.SUPPORTED_NETWORK_IDS
 
-export const EXPLORER_URLS: { [key in string]: string } = {
-    "Ethereum": "https://etherscan.io",
-    "Rinkeby": "https://rinkeby.etherscan.io",
-    "Elastos": "https://explorer.elaeth.io",
-    "Elastos Testnet": "https://testnet.elaeth.io",
-}
+export const EXPLORER_URLS: { [key in string]: string } = networks.EXPLORER_URLS
 
-export const SUPPORTED_RPC_URLS: { [key in string]: string } = {
-    'Ethereum': "https://api-eth.elaphant.app/api/1/eth/wrap", //`https://mainnet.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
-    'Rinkeby': `https://rinkeby.infura.io/v3/${process.env.REACT_APP_INFURA_KEY}`,
-    'Elastos': "https://mainrpc.elaeth.io",
-    'Elastos Testnet': "https://rpc.elaeth.io",
-}
+export const SUPPORTED_RPC_URLS: { [key in string]: string } = networks.SUPPORTED_RPC_URLS
 
 export const INITIAL_STATE = {
     // wallet & web3

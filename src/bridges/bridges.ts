@@ -8,7 +8,7 @@ export const BRIDGE_SYMBOL_MAP: { [key in string]: string } = {
     eth: "ETH",
 }
 export const BRIDGE_NAME_MAP: { [key in string]: string } = {
-    ela: "Elastos",
+    ela: "Heco Mainnet",
     eth: "Ethereum",
 }
 export const BRIDGE_ICON_MAP: { [key in string]: string } = {
